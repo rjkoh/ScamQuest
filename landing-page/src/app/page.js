@@ -1,9 +1,150 @@
 import styles from "./page.module.css";
+import Image from 'next/image'
 
 export default function Home() {
-  return (
-    <main>
 
+  return (
+    <main className={styles.main}>
+      <div className={styles.fold}>
+        <h1 className={styles.headline}>Personalised Teaching with<br></br><span className={styles.headlineHighlight}>Every Student's Insights</span></h1>
+        <h2 className={styles.subheadline}>Empower your teaching with detailed performance analytics and personalized feedback</h2>
+        <div className={styles.buttonRow}>
+          <button className={`${styles.CTAButton} button`}>Try it out for Free</button>
+          <button className={`${styles.DemoButton} button`}>Watch a Demo</button>
+        </div>
+      </div>
+      <img className={styles.mockupImg} src="/images/mockup.png"></img>
+      <h2 className={styles.separatorHeadline}>A New Way of Teaching, Unlocking Every Student’s Potential</h2>
+      <div className={styles.featuresContainer}>
+        <div className={styles.featureContainer}>
+          <div className={styles.featureLeftContainer}>
+            <img src="/images/featureImg1.png" alt="" className={styles.featureImg} />
+          </div>
+          <div className={styles.featureRightContainer}>
+            <div className={styles.featureTextContainer}>
+              <h3 className={styles.featureHeadline}>
+                  <svg className={styles.featureIcon} clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m22 17.75c0-.414-.336-.75-.75-.75h-12.5c-.414 0-.75.336-.75.75s.336.75.75.75h12.5c.414 0 .75-.336.75-.75zm-19.806-.537 1.249 1.114c.13.116.293.173.456.173.184 0 .369-.075.504-.222l2.116-2.313c.119-.131.178-.296.178-.459 0-.375-.302-.682-.683-.682-.185 0-.369.074-.504.221l-1.661 1.815-.746-.665c-.131-.116-.292-.173-.454-.173-.379 0-.683.307-.683.682 0 .188.076.374.228.509zm19.806-3.463c0-.414-.336-.75-.75-.75h-12.5c-.414 0-.75.336-.75.75s.336.75.75.75h12.5c.414 0 .75-.336.75-.75zm-19.806-1.449 1.249 1.114c.13.116.293.173.456.173.184 0 .369-.074.504-.222l2.116-2.313c.119-.131.178-.295.178-.459 0-.375-.302-.682-.683-.682-.185 0-.369.074-.504.221l-1.661 1.815-.746-.665c-.131-.116-.292-.173-.454-.173-.379 0-.683.307-.683.683 0 .187.076.374.228.508zm19.806-2.551c0-.414-.336-.75-.75-.75h-12.5c-.414 0-.75.336-.75.75s.336.75.75.75h12.5c.414 0 .75-.336.75-.75zm-19.806-2.361 1.249 1.114c.13.116.293.173.456.173.184 0 .369-.074.504-.221l2.116-2.313c.119-.131.178-.296.178-.46 0-.374-.302-.682-.683-.682-.185 0-.369.074-.504.221l-1.661 1.815-.746-.664c-.131-.116-.292-.173-.454-.173-.379 0-.683.306-.683.682 0 .187.076.374.228.509zm19.806-1.639c0-.414-.336-.75-.75-.75h-12.5c-.414 0-.75.336-.75.75s.336.75.75.75h12.5c.414 0 .75-.336.75-.75z" fill-rule="nonzero"/></svg>
+                  Automate Marking Of Your Student's Work
+              </h3>
+              <h5 className={styles.featureSubheadline}>Save time with our AI-powered system that automatically marks student work, allowing you to focus on impactful teaching and student engagement</h5>
+              <a href="/#form" className={`${styles.featureButton} button`}>Learn more</a>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.featureContainer}>
+          <div className={styles.featureLeftContainer}>
+            <div className={styles.featureTextContainer}>
+              <h3 className={styles.featureHeadline}>
+                <svg className={styles.featureIcon} fill="black" width="24" height="24" viewBox="0 0 24 24"><path d="M13.077 6.099c.336-.137.683-.156 1.001-.081.681.162 1.232.748 1.278 1.519-.226-.276-.524-.456-.85-.533-.328-.078-.686-.051-1.024.087-.674.275-1.093.915-1.027 1.629-.743-.852-.432-2.19.622-2.621zm.521 9.834c.658.41 2.729 1.548 4.845 4.067 1.912-.781 3.742-1.528 5.558-2.268-.823-2.021-.198-3.151-1.018-5.159-.56-1.37-1.034-1.502-1.943-1.549l.287.708c.175.426-.47.686-.642.262l-.258-.63c-.209-.515-.881-.383-1.469-.387l.35.857c.173.424-.469.688-.643.262l-.303-.744c-.215-.526-.915-.374-1.508-.364l.37.908c.175.428-.471.686-.643.263l-1.503-3.677c-.467-1.144-2.238-.466-1.756.717l2.217 5.434c-.324-.215-.922-.482-1.33-.578-1.263-.298-2.075.969-.611 1.878zm-5.858-5.311l-2.74 2.669.705.709 2.033-1.965 1.496 1.497 2.656-2.672-.422-1-2.228 2.264-1.5-1.502zm-4.658 13.378h2.628l3.42-4h-2.633l-3.415 4zm9.773-4l3.42 4h2.628l-3.415-4h-2.633zm-2.855 4h2v-4h-2v4zm3.141-6c-.902-.564-1.617-.94-2.076-2h-8.065v-13h16v6h2v-6h1v-3h-22v3h1v15h12.141z"/></svg>
+                In-Depth Insights that Actually Matter
+              </h3>
+              <h5 className={styles.featureSubheadline}>Understand your student's strengths and weaknesses, track progress, and tailor your teaching strategies accordingly with detailed analytics</h5>
+              <a href="/#form" className={`${styles.featureButton} button`}>Learn more</a>
+            </div>
+          </div>
+          <div className={styles.featureRightContainer}>
+            <img src="/images/featureImg1.png" alt="" className={styles.featureImg} />
+          </div>
+        </div>
+
+        <div className={styles.featureContainer}>
+          <div className={styles.featureLeftContainer}>
+            <img src="/images/featureImg1.png" alt="" className={styles.featureImg} />
+          </div>
+          <div className={styles.featureRightContainer}>
+            <div className={styles.featureTextContainer}>
+              <h3 className={styles.featureHeadline}>
+                <svg className={styles.featureIcon} fill="black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 16h13v1h-13v-1zm13-3h-13v1h13v-1zm0-6h-5v1h5v-1zm0 3h-5v1h5v-1zm-17-8v17.199c0 .771-1 .771-1 0v-15.199h-2v15.98c0 1.115.905 2.02 2.02 2.02h19.958c1.117 0 2.022-.904 2.022-2.02v-17.98h-21zm19 17h-17v-15h17v15zm-9-12h-6v4h6v-4z"/></svg>
+                Effortlessly Customise Personalised Assignments
+              </h3>
+              <h5 className={styles.featureSubheadline}>Create tailored assignments effortlessly ensuring each student is appropriately challenged based on their needs</h5>
+              <a href="/#form" className={`${styles.featureButton} button`}>Learn more</a>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.featureContainer}>
+          <div className={styles.featureLeftContainer}>
+            <div className={styles.featureTextContainer}>
+              <h3 className={styles.featureHeadline}>
+                <svg className={styles.featureIcon} fill="black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.622 3c-1.913 0-2.558 1.382-5.623 1.382-3.009 0-3.746-1.382-5.623-1.382-5.209 0-6.376 10.375-6.376 14.348 0 2.145.817 3.652 2.469 3.652 3.458 0 2.926-5 6.915-5h5.23c3.989 0 3.457 5 6.915 5 1.652 0 2.471-1.506 2.471-3.651 0-3.973-1.169-14.349-6.378-14.349zm-10.622 10c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3zm10-6c.552 0 1 .447 1 1 0 .553-.448 1-1 1s-1-.447-1-1c0-.553.448-1 1-1zm-2 4c-.552 0-1-.447-1-1 0-.553.448-1 1-1s1 .447 1 1c0 .553-.448 1-1 1zm2 2c-.552 0-1-.447-1-1 0-.553.448-1 1-1s1 .447 1 1c0 .553-.448 1-1 1zm2-2c-.552 0-1-.447-1-1 0-.553.448-1 1-1s1 .447 1 1c0 .553-.448 1-1 1zm-10.25-1c0 .965-.785 1.75-1.75 1.75s-1.75-.785-1.75-1.75.785-1.75 1.75-1.75 1.75.785 1.75 1.75z"/></svg>
+                Keep Students Engaged with Gamification
+              </h3>
+              <h5 className={styles.featureSubheadline}>Make learning fun and engaging with gamified elements - reward progress, create healthy competition, and keep students invested in their educational journey</h5>
+              <a href="/#form" className={`${styles.featureButton} button`}>Learn more</a>
+            </div>
+          </div>
+          <div className={styles.featureRightContainer}>
+            <img src="/images/featureImg1.png" alt="" className={styles.featureImg} />
+          </div>
+        </div>
+
+        <h2 className={styles.pricingHeadline}>Plans that fit your school</h2>
+        <h3 className={styles.pricingSubheadline}>Transparent, Simple and Flexible plans for any institution</h3>
+        <div className={styles.pricingsContainer}>
+          <div className={styles.pricingContainer}>
+            <h4 className={styles.priceHeader}>Personal</h4>
+            <h5 className={styles.priceSubheader}>For Individuals and Small Classes</h5>
+            <p className={styles.priceNumber}>$19 /mth</p>
+            <div className={styles.priceFeaturesList}>
+              <p>
+                <svg className={styles.priceFeatureTick} xmlns="http://www.w3.org/2000/svg" fill="#77e145" width="24" height="24" viewBox="0 0 24 24"><path d="M5.48 10.089l1.583-1.464c1.854.896 3.028 1.578 5.11 3.063 3.916-4.442 6.503-6.696 11.311-9.688l.516 1.186c-3.965 3.46-6.87 7.314-11.051 14.814-2.579-3.038-4.301-4.974-7.469-7.911zm14.407.557c.067.443.113.893.113 1.354 0 4.962-4.038 9-9 9s-9-4.038-9-9 4.038-9 9-9c1.971 0 3.79.644 5.274 1.723.521-.446 1.052-.881 1.6-1.303-1.884-1.511-4.271-2.42-6.874-2.42-6.075 0-11 4.925-11 11s4.925 11 11 11 11-4.925 11-11c0-1.179-.19-2.313-.534-3.378-.528.633-1.052 1.305-1.579 2.024z"/></svg>
+                Class sizes of up to 30 Students
+              </p>
+              <p>
+                <svg className={styles.priceFeatureTick} xmlns="http://www.w3.org/2000/svg" fill="#77e145" width="24" height="24" viewBox="0 0 24 24"><path d="M5.48 10.089l1.583-1.464c1.854.896 3.028 1.578 5.11 3.063 3.916-4.442 6.503-6.696 11.311-9.688l.516 1.186c-3.965 3.46-6.87 7.314-11.051 14.814-2.579-3.038-4.301-4.974-7.469-7.911zm14.407.557c.067.443.113.893.113 1.354 0 4.962-4.038 9-9 9s-9-4.038-9-9 4.038-9 9-9c1.971 0 3.79.644 5.274 1.723.521-.446 1.052-.881 1.6-1.303-1.884-1.511-4.271-2.42-6.874-2.42-6.075 0-11 4.925-11 11s4.925 11 11 11 11-4.925 11-11c0-1.179-.19-2.313-.534-3.378-.528.633-1.052 1.305-1.579 2.024z"/></svg>
+                Unlimited AI Assisted Marking
+              </p>
+              <p>
+                <svg className={styles.priceFeatureTick} xmlns="http://www.w3.org/2000/svg" fill="#77e145" width="24" height="24" viewBox="0 0 24 24"><path d="M5.48 10.089l1.583-1.464c1.854.896 3.028 1.578 5.11 3.063 3.916-4.442 6.503-6.696 11.311-9.688l.516 1.186c-3.965 3.46-6.87 7.314-11.051 14.814-2.579-3.038-4.301-4.974-7.469-7.911zm14.407.557c.067.443.113.893.113 1.354 0 4.962-4.038 9-9 9s-9-4.038-9-9 4.038-9 9-9c1.971 0 3.79.644 5.274 1.723.521-.446 1.052-.881 1.6-1.303-1.884-1.511-4.271-2.42-6.874-2.42-6.075 0-11 4.925-11 11s4.925 11 11 11 11-4.925 11-11c0-1.179-.19-2.313-.534-3.378-.528.633-1.052 1.305-1.579 2.024z"/></svg>
+                Unlimited Personalised
+              </p>
+            </div>
+          </div>
+
+          <div className={styles.pricingContainer}>
+            <h4 className={styles.priceHeader}>Team</h4>
+            <h5 className={styles.priceSubheader}>For Departments and Teams</h5>
+            <p className={styles.priceNumber}>$39 /mth</p>
+            <div className={styles.priceFeaturesList}>
+              <p>
+                <svg className={styles.priceFeatureTick} xmlns="http://www.w3.org/2000/svg" fill="#77e145" width="24" height="24" viewBox="0 0 24 24"><path d="M5.48 10.089l1.583-1.464c1.854.896 3.028 1.578 5.11 3.063 3.916-4.442 6.503-6.696 11.311-9.688l.516 1.186c-3.965 3.46-6.87 7.314-11.051 14.814-2.579-3.038-4.301-4.974-7.469-7.911zm14.407.557c.067.443.113.893.113 1.354 0 4.962-4.038 9-9 9s-9-4.038-9-9 4.038-9 9-9c1.971 0 3.79.644 5.274 1.723.521-.446 1.052-.881 1.6-1.303-1.884-1.511-4.271-2.42-6.874-2.42-6.075 0-11 4.925-11 11s4.925 11 11 11 11-4.925 11-11c0-1.179-.19-2.313-.534-3.378-.528.633-1.052 1.305-1.579 2.024z"/></svg>
+                Class sizes of up to 100 Students
+              </p>
+              <p>
+                <svg className={styles.priceFeatureTick} xmlns="http://www.w3.org/2000/svg" fill="#77e145" width="24" height="24" viewBox="0 0 24 24"><path d="M5.48 10.089l1.583-1.464c1.854.896 3.028 1.578 5.11 3.063 3.916-4.442 6.503-6.696 11.311-9.688l.516 1.186c-3.965 3.46-6.87 7.314-11.051 14.814-2.579-3.038-4.301-4.974-7.469-7.911zm14.407.557c.067.443.113.893.113 1.354 0 4.962-4.038 9-9 9s-9-4.038-9-9 4.038-9 9-9c1.971 0 3.79.644 5.274 1.723.521-.446 1.052-.881 1.6-1.303-1.884-1.511-4.271-2.42-6.874-2.42-6.075 0-11 4.925-11 11s4.925 11 11 11 11-4.925 11-11c0-1.179-.19-2.313-.534-3.378-.528.633-1.052 1.305-1.579 2.024z"/></svg>
+                Up to 20 Teachers
+              </p>
+              <p>
+                <svg className={styles.priceFeatureTick} xmlns="http://www.w3.org/2000/svg" fill="#77e145" width="24" height="24" viewBox="0 0 24 24"><path d="M5.48 10.089l1.583-1.464c1.854.896 3.028 1.578 5.11 3.063 3.916-4.442 6.503-6.696 11.311-9.688l.516 1.186c-3.965 3.46-6.87 7.314-11.051 14.814-2.579-3.038-4.301-4.974-7.469-7.911zm14.407.557c.067.443.113.893.113 1.354 0 4.962-4.038 9-9 9s-9-4.038-9-9 4.038-9 9-9c1.971 0 3.79.644 5.274 1.723.521-.446 1.052-.881 1.6-1.303-1.884-1.511-4.271-2.42-6.874-2.42-6.075 0-11 4.925-11 11s4.925 11 11 11 11-4.925 11-11c0-1.179-.19-2.313-.534-3.378-.528.633-1.052 1.305-1.579 2.024z"/></svg>
+                Organisational Features
+              </p>
+            </div>
+          </div>
+
+          <div className={styles.pricingContainer}>
+            <h4 className={styles.priceHeader}>Personal</h4>
+            <h5 className={styles.priceSubheader}>For Schools and Institutions</h5>
+            <p className={styles.priceNumber}>Custom</p>
+            <div className={styles.priceFeaturesList}>
+              <p>
+                <svg className={styles.priceFeatureTick} xmlns="http://www.w3.org/2000/svg" fill="#77e145" width="24" height="24" viewBox="0 0 24 24"><path d="M5.48 10.089l1.583-1.464c1.854.896 3.028 1.578 5.11 3.063 3.916-4.442 6.503-6.696 11.311-9.688l.516 1.186c-3.965 3.46-6.87 7.314-11.051 14.814-2.579-3.038-4.301-4.974-7.469-7.911zm14.407.557c.067.443.113.893.113 1.354 0 4.962-4.038 9-9 9s-9-4.038-9-9 4.038-9 9-9c1.971 0 3.79.644 5.274 1.723.521-.446 1.052-.881 1.6-1.303-1.884-1.511-4.271-2.42-6.874-2.42-6.075 0-11 4.925-11 11s4.925 11 11 11 11-4.925 11-11c0-1.179-.19-2.313-.534-3.378-.528.633-1.052 1.305-1.579 2.024z"/></svg>
+                Unlimited Class Sizes
+              </p>
+              <p>
+                <svg className={styles.priceFeatureTick} xmlns="http://www.w3.org/2000/svg" fill="#77e145" width="24" height="24" viewBox="0 0 24 24"><path d="M5.48 10.089l1.583-1.464c1.854.896 3.028 1.578 5.11 3.063 3.916-4.442 6.503-6.696 11.311-9.688l.516 1.186c-3.965 3.46-6.87 7.314-11.051 14.814-2.579-3.038-4.301-4.974-7.469-7.911zm14.407.557c.067.443.113.893.113 1.354 0 4.962-4.038 9-9 9s-9-4.038-9-9 4.038-9 9-9c1.971 0 3.79.644 5.274 1.723.521-.446 1.052-.881 1.6-1.303-1.884-1.511-4.271-2.42-6.874-2.42-6.075 0-11 4.925-11 11s4.925 11 11 11 11-4.925 11-11c0-1.179-.19-2.313-.534-3.378-.528.633-1.052 1.305-1.579 2.024z"/></svg>
+                Unlimited Teachers
+              </p>
+              <p>
+                <svg className={styles.priceFeatureTick} xmlns="http://www.w3.org/2000/svg" fill="#77e145" width="24" height="24" viewBox="0 0 24 24"><path d="M5.48 10.089l1.583-1.464c1.854.896 3.028 1.578 5.11 3.063 3.916-4.442 6.503-6.696 11.311-9.688l.516 1.186c-3.965 3.46-6.87 7.314-11.051 14.814-2.579-3.038-4.301-4.974-7.469-7.911zm14.407.557c.067.443.113.893.113 1.354 0 4.962-4.038 9-9 9s-9-4.038-9-9 4.038-9 9-9c1.971 0 3.79.644 5.274 1.723.521-.446 1.052-.881 1.6-1.303-1.884-1.511-4.271-2.42-6.874-2.42-6.075 0-11 4.925-11 11s4.925 11 11 11 11-4.925 11-11c0-1.179-.19-2.313-.534-3.378-.528.633-1.052 1.305-1.579 2.024z"/></svg>
+                Custom Analytics and Support
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </main>
   );
 }

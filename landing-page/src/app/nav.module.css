@@ -3,9 +3,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 10vh;
+    height: var(--navbar-height);
     width: 100vw;
-    padding: calc(1vh + 1rem) calc(1vw + 1rem);
+    padding: calc(1vh + 1rem) calc(4vw + 4rem);
 }
 
 .linksContainer {
@@ -16,12 +16,12 @@
 }
 
 .logoText {
-    font-size: var(--font-size-main);
+    font-size: var(--font-size-logo);
     font-weight: var(--font-weight-main);
 }
 
 .linkText {
-    font-size: var(--font-size-header);
+    font-size: calc(0.5vw + 0.5rem);
     font-weight: var(--font-weight-header);
 }
 
