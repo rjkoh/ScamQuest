@@ -11,13 +11,13 @@ export default function Nav() {
         </Link>
 
         <div className={styles.linksContainer}>
-            <Link className={styles.linkContainer} href="/">
+            <Link className={styles.linkContainer} href="/#features">
                 <h4 className={styles.linkText}>Features</h4>
             </Link>
-            <Link className={styles.linkContainer} href="/">
+            <Link className={styles.linkContainer} href="/#pricings">
                 <h4 className={styles.linkText}>Pricing</h4>
             </Link>
-            <Link className={styles.linkContainer} href="/">
+            <Link className={styles.linkContainer} href="mailto:silastaysl@gmail.com">
                 <h4 className={styles.linkText}>Contact</h4>
             </Link>
         </div>

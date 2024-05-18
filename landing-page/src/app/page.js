@@ -11,17 +11,17 @@ export default function Home() {
         <h1 className={styles.headline}>Personalised Teaching with<br></br><span className={styles.headlineHighlight}>Every Student's Insights</span></h1>
         <h2 className={styles.subheadline}>Empower your teaching with detailed performance analytics and personalized feedback</h2>
         <div className={styles.buttonRow}>
-          <button className={`${styles.CTAButton} button`}>Try it out for Free</button>
-          <button className={`${styles.DemoButton} button`}>
+          <Link href="mailto:silastaysl@gmail.com" className={`${styles.CTAButton} button`}>Try it out for Free</Link>
+          <Link href="mailto:silastaysl@gmail.com" className={`${styles.DemoButton} button`}>
             <svg className={styles.demoIcon} width="24" height="24" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd"><path d="M24 23h-24v-21h24v21zm-20-1v-4h-3v4h3zm15 0v-19h-14v19h14zm4 0v-4h-3v4h3zm-6-9.5l-9 5v-10l9 5zm3 .5v4h3v-4h-3zm-16 4v-4h-3v4h3zm5-1.2l5.941-3.3-5.941-3.3v6.6zm11-7.8v4h3v-4h-3zm-16 4v-4h-3v4h3zm16-9v4h3v-4h-3zm-16 4v-4h-3v4h3z"/></svg>
             Watch a Demo
-          </button>
+          </Link>
         </div>
       </div>
       <div className={styles.mockupImgContainer}>
         <img className={styles.mockupImg} src="/images/mockup.png"></img>
       </div>
-      <h2 className={styles.separatorHeadline}>A New Way of Teaching, Unlocking Every Student’s Potential</h2>
+      <h2 className={styles.separatorHeadline} id="features">A New Way of Teaching, Unlocking Every Student’s Potential</h2>
       <div className={styles.featuresContainer}>
         <div className={styles.featureContainer}>
           <div className={styles.featureLeftContainer}>
@@ -71,7 +71,7 @@ export default function Home() {
           </div>
         </div>
 
-        <h2 className={styles.sectionHeadline}>Plans that fit your school</h2>
+        <h2 className={styles.sectionHeadline} id="pricings">Plans that fit your school</h2>
         <h3 className={styles.sectionSubheadline}>Transparent, Simple and Flexible plans for any institution</h3>
         <div className={styles.pricingsContainer}>
           <div className={styles.pricingContainer}>
@@ -138,12 +138,12 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={styles.formContainer}>
+        <div className={styles.formContainer} id="form">
           <h2 className={`${styles.sectionHeadline} ${styles.formHeadline}`}>Unlocking Every Student's Potential</h2>
           <h3 className={`${styles.sectionSubheadline} ${styles.formSubheadline}`}>Sign up to revolutionise the way you engage your students</h3>
           <div className={styles.buttonRow}>
-            <Link className={`${styles.CTAButton} button`} href="/">Get started for Free</Link>
-            <Link className={`${styles.DemoButton} button`} href="/">
+            <Link className={`${styles.CTAButton} button`} href="mailto:silastaysl@gmail.com">Get started for Free</Link>
+            <Link className={`${styles.DemoButton} button`} href="mailto:silastaysl@gmail.com">
               <svg className={styles.demoIcon} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M18.48 22.926l-1.193.658c-6.979 3.621-19.082-17.494-12.279-21.484l1.145-.637 3.714 6.467-1.139.632c-2.067 1.245 2.76 9.707 4.879 8.545l1.162-.642 3.711 6.461zm-9.808-22.926l-1.68.975 3.714 6.466 1.681-.975-3.715-6.466zm8.613 14.997l-1.68.975 3.714 6.467 1.681-.975-3.715-6.467z"/></svg>
               Contact us
             </Link>  
