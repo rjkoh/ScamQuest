@@ -1,8 +1,5 @@
-'use client'
-
 import React from 'react'
 import styles from "./nav.module.css";
-import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
 
@@ -10,7 +7,7 @@ export default function Nav() {
   return (
     <nav className={styles.navbar}>
         <Link className={styles.logoContainer} href="/">
-            <h1 className={styles.logoText}>Logo.</h1>
+            <img className={styles.logoImg} src="./images/logo.png"></img>
         </Link>
 
         <div className={styles.linksContainer}>

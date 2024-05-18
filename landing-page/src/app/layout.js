@@ -1,5 +1,6 @@
 import "./globals.css";
 import Nav from "./nav";
+import Footer from "./footer";
 
 export const metadata = {
   title: "Logo.",
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
       <body>
         <Nav></Nav>
         {children}
+        <Footer></Footer>
       </body>
     </html>
   );

@@ -8,6 +8,10 @@
     padding: calc(1vh + 1rem) calc(4vw + 4rem);
 }
 
+.logoImg {
+    height: calc(1.6vh + 1.6rem);
+}
+
 .linksContainer {
     display: flex;
     flex-direction: row;

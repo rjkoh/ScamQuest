@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import Image from 'next/image'
+import Link from 'next/link';
 
 export default function Home() {
 
@@ -10,7 +10,10 @@ export default function Home() {
         <h2 className={styles.subheadline}>Empower your teaching with detailed performance analytics and personalized feedback</h2>
         <div className={styles.buttonRow}>
           <button className={`${styles.CTAButton} button`}>Try it out for Free</button>
-          <button className={`${styles.DemoButton} button`}>Watch a Demo</button>
+          <button className={`${styles.DemoButton} button`}>
+            <svg className={styles.demoIcon} width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 23h-24v-21h24v21zm-20-1v-4h-3v4h3zm15 0v-19h-14v19h14zm4 0v-4h-3v4h3zm-6-9.5l-9 5v-10l9 5zm3 .5v4h3v-4h-3zm-16 4v-4h-3v4h3zm5-1.2l5.941-3.3-5.941-3.3v6.6zm11-7.8v4h3v-4h-3zm-16 4v-4h-3v4h3zm16-9v4h3v-4h-3zm-16 4v-4h-3v4h3z"/></svg>
+            Watch a Demo
+          </button>
         </div>
       </div>
       <img className={styles.mockupImg} src="/images/mockup.png"></img>
@@ -23,11 +26,11 @@ export default function Home() {
           <div className={styles.featureRightContainer}>
             <div className={styles.featureTextContainer}>
               <h3 className={styles.featureHeadline}>
-                  <svg className={styles.featureIcon} clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m22 17.75c0-.414-.336-.75-.75-.75h-12.5c-.414 0-.75.336-.75.75s.336.75.75.75h12.5c.414 0 .75-.336.75-.75zm-19.806-.537 1.249 1.114c.13.116.293.173.456.173.184 0 .369-.075.504-.222l2.116-2.313c.119-.131.178-.296.178-.459 0-.375-.302-.682-.683-.682-.185 0-.369.074-.504.221l-1.661 1.815-.746-.665c-.131-.116-.292-.173-.454-.173-.379 0-.683.307-.683.682 0 .188.076.374.228.509zm19.806-3.463c0-.414-.336-.75-.75-.75h-12.5c-.414 0-.75.336-.75.75s.336.75.75.75h12.5c.414 0 .75-.336.75-.75zm-19.806-1.449 1.249 1.114c.13.116.293.173.456.173.184 0 .369-.074.504-.222l2.116-2.313c.119-.131.178-.295.178-.459 0-.375-.302-.682-.683-.682-.185 0-.369.074-.504.221l-1.661 1.815-.746-.665c-.131-.116-.292-.173-.454-.173-.379 0-.683.307-.683.683 0 .187.076.374.228.508zm19.806-2.551c0-.414-.336-.75-.75-.75h-12.5c-.414 0-.75.336-.75.75s.336.75.75.75h12.5c.414 0 .75-.336.75-.75zm-19.806-2.361 1.249 1.114c.13.116.293.173.456.173.184 0 .369-.074.504-.221l2.116-2.313c.119-.131.178-.296.178-.46 0-.374-.302-.682-.683-.682-.185 0-.369.074-.504.221l-1.661 1.815-.746-.664c-.131-.116-.292-.173-.454-.173-.379 0-.683.306-.683.682 0 .187.076.374.228.509zm19.806-1.639c0-.414-.336-.75-.75-.75h-12.5c-.414 0-.75.336-.75.75s.336.75.75.75h12.5c.414 0 .75-.336.75-.75z" fill-rule="nonzero"/></svg>
+                  <svg className={styles.featureIcon} clipRule="evenodd" fillRule="evenodd" strokeLinejoin="round" strokeMiterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m22 17.75c0-.414-.336-.75-.75-.75h-12.5c-.414 0-.75.336-.75.75s.336.75.75.75h12.5c.414 0 .75-.336.75-.75zm-19.806-.537 1.249 1.114c.13.116.293.173.456.173.184 0 .369-.075.504-.222l2.116-2.313c.119-.131.178-.296.178-.459 0-.375-.302-.682-.683-.682-.185 0-.369.074-.504.221l-1.661 1.815-.746-.665c-.131-.116-.292-.173-.454-.173-.379 0-.683.307-.683.682 0 .188.076.374.228.509zm19.806-3.463c0-.414-.336-.75-.75-.75h-12.5c-.414 0-.75.336-.75.75s.336.75.75.75h12.5c.414 0 .75-.336.75-.75zm-19.806-1.449 1.249 1.114c.13.116.293.173.456.173.184 0 .369-.074.504-.222l2.116-2.313c.119-.131.178-.295.178-.459 0-.375-.302-.682-.683-.682-.185 0-.369.074-.504.221l-1.661 1.815-.746-.665c-.131-.116-.292-.173-.454-.173-.379 0-.683.307-.683.683 0 .187.076.374.228.508zm19.806-2.551c0-.414-.336-.75-.75-.75h-12.5c-.414 0-.75.336-.75.75s.336.75.75.75h12.5c.414 0 .75-.336.75-.75zm-19.806-2.361 1.249 1.114c.13.116.293.173.456.173.184 0 .369-.074.504-.221l2.116-2.313c.119-.131.178-.296.178-.46 0-.374-.302-.682-.683-.682-.185 0-.369.074-.504.221l-1.661 1.815-.746-.664c-.131-.116-.292-.173-.454-.173-.379 0-.683.306-.683.682 0 .187.076.374.228.509zm19.806-1.639c0-.414-.336-.75-.75-.75h-12.5c-.414 0-.75.336-.75.75s.336.75.75.75h12.5c.414 0 .75-.336.75-.75z" fillRule="nonzero"/></svg>
                   Automate Marking Of Your Student's Work
               </h3>
               <h5 className={styles.featureSubheadline}>Save time with our AI-powered system that automatically marks student work, allowing you to focus on impactful teaching and student engagement</h5>
-              <a href="/#form" className={`${styles.featureButton} button`}>Learn more</a>
+              <Link href="/#form" className={`${styles.featureButton} button`}>Learn more</Link>
             </div>
           </div>
         </div>
@@ -40,7 +43,7 @@ export default function Home() {
                 In-Depth Insights that Actually Matter
               </h3>
               <h5 className={styles.featureSubheadline}>Understand your student's strengths and weaknesses, track progress, and tailor your teaching strategies accordingly with detailed analytics</h5>
-              <a href="/#form" className={`${styles.featureButton} button`}>Learn more</a>
+              <Link href="/#form" className={`${styles.featureButton} button`}>Learn more</Link>
             </div>
           </div>
           <div className={styles.featureRightContainer}>
@@ -59,7 +62,7 @@ export default function Home() {
                 Effortlessly Customise Personalised Assignments
               </h3>
               <h5 className={styles.featureSubheadline}>Create tailored assignments effortlessly ensuring each student is appropriately challenged based on their needs</h5>
-              <a href="/#form" className={`${styles.featureButton} button`}>Learn more</a>
+              <Link href="/#form" className={`${styles.featureButton} button`}>Learn more</Link>
             </div>
           </div>
         </div>
@@ -72,7 +75,7 @@ export default function Home() {
                 Keep Students Engaged with Gamification
               </h3>
               <h5 className={styles.featureSubheadline}>Make learning fun and engaging with gamified elements - reward progress, create healthy competition, and keep students invested in their educational journey</h5>
-              <a href="/#form" className={`${styles.featureButton} button`}>Learn more</a>
+              <Link href="/#form" className={`${styles.featureButton} button`}>Learn more</Link>
             </div>
           </div>
           <div className={styles.featureRightContainer}>
@@ -80,13 +83,14 @@ export default function Home() {
           </div>
         </div>
 
-        <h2 className={styles.pricingHeadline}>Plans that fit your school</h2>
-        <h3 className={styles.pricingSubheadline}>Transparent, Simple and Flexible plans for any institution</h3>
+        <h2 className={styles.sectionHeadline}>Plans that fit your school</h2>
+        <h3 className={styles.sectionSubheadline}>Transparent, Simple and Flexible plans for any institution</h3>
         <div className={styles.pricingsContainer}>
           <div className={styles.pricingContainer}>
             <h4 className={styles.priceHeader}>Personal</h4>
             <h5 className={styles.priceSubheader}>For Individuals and Small Classes</h5>
             <p className={styles.priceNumber}>$19 /mth</p>
+            <Link className={`${styles.priceButton} button`} href="/#form">Free Trial Now</Link>
             <div className={styles.priceFeaturesList}>
               <p>
                 <svg className={styles.priceFeatureTick} xmlns="http://www.w3.org/2000/svg" fill="#77e145" width="24" height="24" viewBox="0 0 24 24"><path d="M5.48 10.089l1.583-1.464c1.854.896 3.028 1.578 5.11 3.063 3.916-4.442 6.503-6.696 11.311-9.688l.516 1.186c-3.965 3.46-6.87 7.314-11.051 14.814-2.579-3.038-4.301-4.974-7.469-7.911zm14.407.557c.067.443.113.893.113 1.354 0 4.962-4.038 9-9 9s-9-4.038-9-9 4.038-9 9-9c1.971 0 3.79.644 5.274 1.723.521-.446 1.052-.881 1.6-1.303-1.884-1.511-4.271-2.42-6.874-2.42-6.075 0-11 4.925-11 11s4.925 11 11 11 11-4.925 11-11c0-1.179-.19-2.313-.534-3.378-.528.633-1.052 1.305-1.579 2.024z"/></svg>
@@ -94,11 +98,11 @@ export default function Home() {
               </p>
               <p>
                 <svg className={styles.priceFeatureTick} xmlns="http://www.w3.org/2000/svg" fill="#77e145" width="24" height="24" viewBox="0 0 24 24"><path d="M5.48 10.089l1.583-1.464c1.854.896 3.028 1.578 5.11 3.063 3.916-4.442 6.503-6.696 11.311-9.688l.516 1.186c-3.965 3.46-6.87 7.314-11.051 14.814-2.579-3.038-4.301-4.974-7.469-7.911zm14.407.557c.067.443.113.893.113 1.354 0 4.962-4.038 9-9 9s-9-4.038-9-9 4.038-9 9-9c1.971 0 3.79.644 5.274 1.723.521-.446 1.052-.881 1.6-1.303-1.884-1.511-4.271-2.42-6.874-2.42-6.075 0-11 4.925-11 11s4.925 11 11 11 11-4.925 11-11c0-1.179-.19-2.313-.534-3.378-.528.633-1.052 1.305-1.579 2.024z"/></svg>
-                Unlimited AI Assisted Marking
+                AI-Assisted Features
               </p>
               <p>
                 <svg className={styles.priceFeatureTick} xmlns="http://www.w3.org/2000/svg" fill="#77e145" width="24" height="24" viewBox="0 0 24 24"><path d="M5.48 10.089l1.583-1.464c1.854.896 3.028 1.578 5.11 3.063 3.916-4.442 6.503-6.696 11.311-9.688l.516 1.186c-3.965 3.46-6.87 7.314-11.051 14.814-2.579-3.038-4.301-4.974-7.469-7.911zm14.407.557c.067.443.113.893.113 1.354 0 4.962-4.038 9-9 9s-9-4.038-9-9 4.038-9 9-9c1.971 0 3.79.644 5.274 1.723.521-.446 1.052-.881 1.6-1.303-1.884-1.511-4.271-2.42-6.874-2.42-6.075 0-11 4.925-11 11s4.925 11 11 11 11-4.925 11-11c0-1.179-.19-2.313-.534-3.378-.528.633-1.052 1.305-1.579 2.024z"/></svg>
-                Unlimited Personalised
+                Long-term Gamification
               </p>
             </div>
           </div>
@@ -107,6 +111,7 @@ export default function Home() {
             <h4 className={styles.priceHeader}>Team</h4>
             <h5 className={styles.priceSubheader}>For Departments and Teams</h5>
             <p className={styles.priceNumber}>$39 /mth</p>
+            <Link className={`${styles.priceButton} button`} href="/#form">Free Trial Now</Link>
             <div className={styles.priceFeaturesList}>
               <p>
                 <svg className={styles.priceFeatureTick} xmlns="http://www.w3.org/2000/svg" fill="#77e145" width="24" height="24" viewBox="0 0 24 24"><path d="M5.48 10.089l1.583-1.464c1.854.896 3.028 1.578 5.11 3.063 3.916-4.442 6.503-6.696 11.311-9.688l.516 1.186c-3.965 3.46-6.87 7.314-11.051 14.814-2.579-3.038-4.301-4.974-7.469-7.911zm14.407.557c.067.443.113.893.113 1.354 0 4.962-4.038 9-9 9s-9-4.038-9-9 4.038-9 9-9c1.971 0 3.79.644 5.274 1.723.521-.446 1.052-.881 1.6-1.303-1.884-1.511-4.271-2.42-6.874-2.42-6.075 0-11 4.925-11 11s4.925 11 11 11 11-4.925 11-11c0-1.179-.19-2.313-.534-3.378-.528.633-1.052 1.305-1.579 2.024z"/></svg>
@@ -127,6 +132,7 @@ export default function Home() {
             <h4 className={styles.priceHeader}>Personal</h4>
             <h5 className={styles.priceSubheader}>For Schools and Institutions</h5>
             <p className={styles.priceNumber}>Custom</p>
+            <Link className={`${styles.priceButton} button`} href="/#form">Free Trial Now</Link>
             <div className={styles.priceFeaturesList}>
               <p>
                 <svg className={styles.priceFeatureTick} xmlns="http://www.w3.org/2000/svg" fill="#77e145" width="24" height="24" viewBox="0 0 24 24"><path d="M5.48 10.089l1.583-1.464c1.854.896 3.028 1.578 5.11 3.063 3.916-4.442 6.503-6.696 11.311-9.688l.516 1.186c-3.965 3.46-6.87 7.314-11.051 14.814-2.579-3.038-4.301-4.974-7.469-7.911zm14.407.557c.067.443.113.893.113 1.354 0 4.962-4.038 9-9 9s-9-4.038-9-9 4.038-9 9-9c1.971 0 3.79.644 5.274 1.723.521-.446 1.052-.881 1.6-1.303-1.884-1.511-4.271-2.42-6.874-2.42-6.075 0-11 4.925-11 11s4.925 11 11 11 11-4.925 11-11c0-1.179-.19-2.313-.534-3.378-.528.633-1.052 1.305-1.579 2.024z"/></svg>
@@ -142,6 +148,18 @@ export default function Home() {
               </p>
             </div>
           </div>
+        </div>
+
+        <div className={styles.formContainer}>
+          <h2 className={`${styles.sectionHeadline} ${styles.formHeadline}`}>Unlocking Every Student's Potential</h2>
+          <h3 className={`${styles.sectionSubheadline} ${styles.formSubheadline}`}>Sign up to revolutionise the way you engage your students</h3>
+          <div className={styles.buttonRow}>
+            <Link className={`${styles.CTAButton} button`} href="/">Get started for Free</Link>
+            <Link className={`${styles.DemoButton} button`} href="/">
+              <svg className={styles.demoIcon} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M18.48 22.926l-1.193.658c-6.979 3.621-19.082-17.494-12.279-21.484l1.145-.637 3.714 6.467-1.139.632c-2.067 1.245 2.76 9.707 4.879 8.545l1.162-.642 3.711 6.461zm-9.808-22.926l-1.68.975 3.714 6.466 1.681-.975-3.715-6.466zm8.613 14.997l-1.68.975 3.714 6.467 1.681-.975-3.715-6.467z"/></svg>
+              Contact us
+            </Link>  
+          </div>  
         </div>
 
       </div>

@@ -5,11 +5,11 @@
   background-color: rgb(255, 255, 255);
 
   --font-color-main: #1a2635;
-  --font-color-secondary: rgb(91, 91, 91);
+  --font-color-secondary: rgb(121, 121, 121);
 
   color: var(--font-color-main);
 
-  --navbar-height: 11vh;
+  --navbar-height: 12vh;
 
   --font-family-main: "DM Sans", sans-serif;
   --font-family-secondary: "Inter", sans-serif;
