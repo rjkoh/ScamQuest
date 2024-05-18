@@ -6,6 +6,8 @@
     height: var(--navbar-height);
     width: 100vw;
     padding: calc(1vh + 1rem) calc(4vw + 4rem);
+    background-color: white;
+    z-index: 1;
 }
 
 .logoImg {

@@ -19,6 +19,24 @@
     font-family: var(--font-family-main);
     background-image: radial-gradient(hsla(0, 0%, 0%, 0.1) 10%, transparent 10%);
     background-size: 45px 45px;
+    overflow: hidden;
+}
+
+.backgroundImg {
+    position: absolute;
+    z-index: 0;
+}
+
+.backgroundImg:nth-child(1) {
+    top: 40%;
+    left: -20%;
+    height: 70vh;
+}
+
+.backgroundImg:nth-child(2) {
+    top: -20%;
+    left: 80%;
+    height: 80vh;
 }
 
 .headline {
@@ -42,6 +60,7 @@
     margin-top: 1.5%;
     font-family: var(--font-family-main);
     font-weight: var(--font-weight-header);
+    z-index: 1;
 }
 
 .buttonRow {
@@ -60,6 +79,7 @@
     align-items: center;
     font-size: calc(0.7rem + 0.7vw);
     padding: calc(0.6rem + 0.6vh) calc(1.2rem + 1.2vw);
+    z-index: 1;
 }
 
 .CTAButton {
@@ -79,10 +99,21 @@
     fill: var(--font-color-secondary);
 }
 
+.mockupImgContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    z-index: 1;
+}
+
 .mockupImg {
     width: 70%;
     margin-top: 2%;
     border-radius: 20px;
+    z-index: 1;
 }
 
 .separatorHeadline {
@@ -124,12 +155,12 @@
 
 .featureLeftContainer {
     align-items: flex-end;
-    padding-right: calc(1.5rem + 1.5vw);
+    padding-right: calc(1rem + 1vw);
 }
 
 .featureRightContainer {
     align-items: flex-start;
-    padding-left: calc(1.5rem + 1.5vw);
+    padding-left: calc(1rem + 1vw);
 }
 
 .featureTextContainer {
@@ -138,7 +169,7 @@
 }
 
 .featureImg {
-    width: 82%;
+    width: 90%;
 }
 
 .featureHeadline {

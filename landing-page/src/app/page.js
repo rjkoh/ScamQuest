@@ -6,17 +6,21 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.fold}>
+        <img className={styles.backgroundImg} src="./images/backgroundImg.png"></img>
+        <img className={styles.backgroundImg} src="./images/backgroundImg.png"></img>
         <h1 className={styles.headline}>Personalised Teaching with<br></br><span className={styles.headlineHighlight}>Every Student's Insights</span></h1>
         <h2 className={styles.subheadline}>Empower your teaching with detailed performance analytics and personalized feedback</h2>
         <div className={styles.buttonRow}>
           <button className={`${styles.CTAButton} button`}>Try it out for Free</button>
           <button className={`${styles.DemoButton} button`}>
-            <svg className={styles.demoIcon} width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 23h-24v-21h24v21zm-20-1v-4h-3v4h3zm15 0v-19h-14v19h14zm4 0v-4h-3v4h3zm-6-9.5l-9 5v-10l9 5zm3 .5v4h3v-4h-3zm-16 4v-4h-3v4h3zm5-1.2l5.941-3.3-5.941-3.3v6.6zm11-7.8v4h3v-4h-3zm-16 4v-4h-3v4h3zm16-9v4h3v-4h-3zm-16 4v-4h-3v4h3z"/></svg>
+            <svg className={styles.demoIcon} width="24" height="24" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd"><path d="M24 23h-24v-21h24v21zm-20-1v-4h-3v4h3zm15 0v-19h-14v19h14zm4 0v-4h-3v4h3zm-6-9.5l-9 5v-10l9 5zm3 .5v4h3v-4h-3zm-16 4v-4h-3v4h3zm5-1.2l5.941-3.3-5.941-3.3v6.6zm11-7.8v4h3v-4h-3zm-16 4v-4h-3v4h3zm16-9v4h3v-4h-3zm-16 4v-4h-3v4h3z"/></svg>
             Watch a Demo
           </button>
         </div>
       </div>
-      <img className={styles.mockupImg} src="/images/mockup.png"></img>
+      <div className={styles.mockupImgContainer}>
+        <img className={styles.mockupImg} src="/images/mockup.png"></img>
+      </div>
       <h2 className={styles.separatorHeadline}>A New Way of Teaching, Unlocking Every Student’s Potential</h2>
       <div className={styles.featuresContainer}>
         <div className={styles.featureContainer}>
@@ -47,28 +51,15 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.featureRightContainer}>
-            <img src="/images/featureImg1.png" alt="" className={styles.featureImg} />
+            <img src="/images/featureImg2.png" alt="" className={styles.featureImg} />
           </div>
         </div>
 
         <div className={styles.featureContainer}>
           <div className={styles.featureLeftContainer}>
-            <img src="/images/featureImg1.png" alt="" className={styles.featureImg} />
+            <img src="/images/featureImg3.png" alt="" className={styles.featureImg} />
           </div>
           <div className={styles.featureRightContainer}>
-            <div className={styles.featureTextContainer}>
-              <h3 className={styles.featureHeadline}>
-                <svg className={styles.featureIcon} fill="black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 16h13v1h-13v-1zm13-3h-13v1h13v-1zm0-6h-5v1h5v-1zm0 3h-5v1h5v-1zm-17-8v17.199c0 .771-1 .771-1 0v-15.199h-2v15.98c0 1.115.905 2.02 2.02 2.02h19.958c1.117 0 2.022-.904 2.022-2.02v-17.98h-21zm19 17h-17v-15h17v15zm-9-12h-6v4h6v-4z"/></svg>
-                Effortlessly Customise Personalised Assignments
-              </h3>
-              <h5 className={styles.featureSubheadline}>Create tailored assignments effortlessly ensuring each student is appropriately challenged based on their needs</h5>
-              <Link href="/#form" className={`${styles.featureButton} button`}>Learn more</Link>
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.featureContainer}>
-          <div className={styles.featureLeftContainer}>
             <div className={styles.featureTextContainer}>
               <h3 className={styles.featureHeadline}>
                 <svg className={styles.featureIcon} fill="black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.622 3c-1.913 0-2.558 1.382-5.623 1.382-3.009 0-3.746-1.382-5.623-1.382-5.209 0-6.376 10.375-6.376 14.348 0 2.145.817 3.652 2.469 3.652 3.458 0 2.926-5 6.915-5h5.23c3.989 0 3.457 5 6.915 5 1.652 0 2.471-1.506 2.471-3.651 0-3.973-1.169-14.349-6.378-14.349zm-10.622 10c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3zm10-6c.552 0 1 .447 1 1 0 .553-.448 1-1 1s-1-.447-1-1c0-.553.448-1 1-1zm-2 4c-.552 0-1-.447-1-1 0-.553.448-1 1-1s1 .447 1 1c0 .553-.448 1-1 1zm2 2c-.552 0-1-.447-1-1 0-.553.448-1 1-1s1 .447 1 1c0 .553-.448 1-1 1zm2-2c-.552 0-1-.447-1-1 0-.553.448-1 1-1s1 .447 1 1c0 .553-.448 1-1 1zm-10.25-1c0 .965-.785 1.75-1.75 1.75s-1.75-.785-1.75-1.75.785-1.75 1.75-1.75 1.75.785 1.75 1.75z"/></svg>
@@ -77,9 +68,6 @@ export default function Home() {
               <h5 className={styles.featureSubheadline}>Make learning fun and engaging with gamified elements - reward progress, create healthy competition, and keep students invested in their educational journey</h5>
               <Link href="/#form" className={`${styles.featureButton} button`}>Learn more</Link>
             </div>
-          </div>
-          <div className={styles.featureRightContainer}>
-            <img src="/images/featureImg1.png" alt="" className={styles.featureImg} />
           </div>
         </div>
 
