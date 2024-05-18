@@ -3,8 +3,11 @@ import Nav from "./nav";
 import Footer from "./footer";
 
 export const metadata = {
-  title: "Logo.",
-  description: "Description of Logo.",
+  title: "Harvest - Revolutionising Education",
+  description: "Personalised Teaching with Every Student's Insights. Empower your teaching with detailed performance analytics and personalized feedback.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }) {
