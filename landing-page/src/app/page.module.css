@@ -342,17 +342,3 @@
         font-size: calc(0.5rem + 0.5vw);
     }
 }
-
-@media (max-width: 950px) {
-    .backgroundImg:nth-child(1) {
-        top: 50%;
-    }
-
-    .featureHeadline {
-        font-size: calc(1rem + 1vw);
-    }
-
-    .featureSubheadline {
-        font-size: calc(0.5rem + 0.5vw);
-    }
-}
