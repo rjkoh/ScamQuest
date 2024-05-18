@@ -32,3 +32,23 @@
     font-size: calc(0.45vw + 0.45rem);
     color: var(--font-color-secondary);
 }
+
+@media (max-width: 850px) {
+    .linksContainer {
+        column-gap: calc(1.2rem + 1.2vw);
+    }
+
+    .logoImg {
+        height: calc(1.4vh + 1.4rem);
+    }
+}
+
+@media (max-width: 500px) {
+    .linksContainer {
+        display: none;
+    }
+
+    .logoImg {
+        height: calc(1.2vh + 1.2rem);
+    }
+}

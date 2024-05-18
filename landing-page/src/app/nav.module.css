@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     height: var(--navbar-height);
-    width: 100vw;
+    width: 100%;
     padding: calc(1vh + 1rem) calc(4vw + 4rem);
     background-color: white;
     z-index: 1;
@@ -31,6 +31,10 @@
     font-weight: var(--font-weight-header);
 }
 
+.loginText {
+    font-size: calc(0.55vw + 0.55rem);
+}
+
 .linkContainer {
     transition-duration: 0.2s;
 }
@@ -53,4 +57,41 @@
 .loginButtonContainer:hover {
     fill: var(--font-color-hover);
     color: var(--font-color-hover);
+}
+
+@media (max-width: 850px) {
+    .navbar {
+        padding: calc(0.7vh + 0.7rem) calc(2.5vw + 2.5rem);
+        height: calc(var(--navbar-height) * 0.8);
+    }
+}
+
+@media (max-width: 700px) {
+    .logoImg {
+        height: calc(1.4vh + 1rem);
+    }
+
+    .navbar {
+        height: calc(var(--navbar-height) * 0.7);
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar {
+        height: calc(var(--navbar-height) * 0.6);
+    }
+
+    .logoContainer {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .linksContainer {
+        display: none;
+    }
+
+    .loginButtonContainer {
+        display: none;
+    }
 }

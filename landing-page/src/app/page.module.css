@@ -116,15 +116,6 @@
     z-index: 1;
 }
 
-.separatorHeadline {
-    font-family: var(--font-family-main);
-    font-weight: var(--font-weight-main);
-    font-size: calc(var(--font-size-logo) * 1.4);
-    text-align: center;
-    margin-top: 20vh;
-    margin-bottom: 5%;
-}
-
 .featuresContainer {
     display: flex;
     flex-direction: column;
@@ -139,7 +130,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    row-gap: calc(3rem + 3vw);
     margin-bottom: 15vh;
 }
 
@@ -164,6 +154,8 @@
 }
 
 .featureTextContainer {
+    display: flex;
+    flex-direction: column;
     align-items: flex-start;
     width: 37vw;
 }
@@ -219,6 +211,12 @@
     font-size: calc(var(--font-size-logo) * 1.4);
     text-align: center;
     margin-top: 5%;
+    width: 80%;
+}
+
+.separatorHeadline {
+    margin-top: 20vh;
+    margin-bottom: 5%;
 }
 
 .sectionSubheadline {
@@ -228,6 +226,8 @@
     text-align: center;
     margin-top: 1%;
     color: var(--font-color-secondary);
+    width: 80%;
+    align-self: center;
 }
 
 .pricingsContainer {
@@ -299,6 +299,8 @@
 }
 
 .formContainer {
+    display: flex;
+    flex-direction: column;
     margin-top: 20vh;
     margin-bottom: 20vh;
 }
@@ -340,5 +342,144 @@
 
     .featureSubheadline {
         font-size: calc(0.5rem + 0.5vw);
+    }
+}
+
+@media (max-width: 850px) {
+    .pricingsContainer {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 80vw;
+        row-gap: calc(1rem + 1vh);
+    }
+
+    .pricingContainer {
+        width: 70%;
+        align-items: center;
+        padding-bottom: 5%;
+    }
+
+    .priceNumber {
+        margin-top: 7%;
+        font-size: calc(var(--font-size-logo) * 1.5);
+    }
+    
+    .priceHeader {
+        font-size: calc(var(--font-size-header) * 2.4);
+    }
+
+    .priceButton {
+        font-size: calc(var(--font-size-header) * 1.5);
+    }
+
+    .separatorHeadline {
+        font-size: calc(var(--font-size-logo) * 1);
+    }
+}
+
+@media (max-width: 650px) {
+    .backgroundImg:nth-child(1) {
+        top: 60%;
+    }
+
+    .featureHeadline {
+        font-size: calc(0.8rem + 0.8vw);
+    }
+
+    .featureSubheadline {
+        font-size: calc(0.45rem + 0.45vw);
+    }
+
+    .headline {
+        font-size: calc(var(--font-size-headline) * 0.8);
+        width: 80%;
+    }
+
+    .subheadline {
+        font-size: calc(0.55rem + 0.55vw);
+        width: 80%;
+    }
+
+    .DemoButton, .CTAButton {
+        font-size: calc(0.6rem + 0.6vw);
+        padding: calc(0.4rem + 0.4vh) calc(0.8rem + 0.8vw);
+    }
+
+    .demoIcon {
+        transform: scale(0.8);
+    }
+
+    .featureContainer {
+        flex-direction: column;
+        row-gap: calc(1rem + 1vh);
+        margin-bottom: 12vh;
+    }
+
+    .featureTextContainer {
+        align-items: center;
+        width: 100%;
+    }
+
+    .featureSubheadline {
+        text-align: justify;
+    }
+
+    .featureRightContainer {
+        padding-left: 0;
+    }
+
+    .featureLeftContainer {
+        padding-right: 0;
+    }
+
+    .featureContainerReverse {
+        flex-direction: column-reverse;
+    }
+
+    .formHeadline {
+        width: 80%;
+        align-self: center;
+    }
+
+    .separatorHeadline {
+        margin-top: 15vh;
+    }
+
+    .formContainer {
+        margin-top: 15vh;
+        margin-bottom: 15vh;
+    }
+}
+
+@media (max-width: 500px) {
+    .priceButton {
+        font-size: calc(var(--font-size-header) * 1);
+    }
+
+    .priceNumber {
+        margin-top: 7%;
+        font-size: calc(var(--font-size-logo) * 1.1);
+    }
+
+    .priceHeader {
+        font-size: calc(var(--font-size-header) * 1.6);
+    }
+
+    .priceSubheader {
+        font-size: calc(var(--font-size-secondary) * 1.1);
+    }
+
+    .pricingContainer {
+        padding: 5%;
+    }
+
+    .separatorHeadline {
+        font-size: calc(var(--font-size-logo) * 0.9);
+    }
+
+    .formContainer {
+        margin-top: 12vh;
+        margin-bottom: 12vh;
     }
 }

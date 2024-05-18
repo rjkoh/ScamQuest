@@ -21,7 +21,7 @@ export default function Home() {
       <div className={styles.mockupImgContainer}>
         <img className={styles.mockupImg} src="/images/mockup.png"></img>
       </div>
-      <h2 className={styles.separatorHeadline} id="features">A New Way of Teaching, Unlocking Every Student’s Potential</h2>
+      <h2 className={`${styles.separatorHeadline} ${styles.sectionHeadline}`} id="features">A New Way of Teaching, Unlocking Every Student’s Potential</h2>
       <div className={styles.featuresContainer}>
         <div className={styles.featureContainer}>
           <div className={styles.featureLeftContainer}>
@@ -39,7 +39,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={styles.featureContainer}>
+        <div className={`${styles.featureContainer} ${styles.featureContainerReverse}`}>
           <div className={styles.featureLeftContainer}>
             <div className={styles.featureTextContainer}>
               <h3 className={styles.featureHeadline}>
