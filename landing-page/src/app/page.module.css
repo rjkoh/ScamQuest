@@ -449,6 +449,7 @@
 
     .separatorHeadline {
         margin-top: 15vh;
+        margin-bottom: 10%;
     }
 
     .formContainer {
@@ -485,6 +486,7 @@
 
     .separatorHeadline {
         font-size: calc(var(--font-size-logo) * 0.9);
+        margin-bottom: 15%;
     }
 
     .formContainer {
