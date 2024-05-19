@@ -301,6 +301,7 @@
 .formContainer {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-top: 20vh;
     margin-bottom: 20vh;
 }
@@ -376,6 +377,10 @@
     .separatorHeadline {
         font-size: calc(var(--font-size-logo) * 1);
     }
+
+    .mockupImg {
+        margin-top: 3%;
+    }
 }
 
 @media (max-width: 650px) {
@@ -449,6 +454,10 @@
     .formContainer {
         margin-top: 15vh;
         margin-bottom: 15vh;
+    }
+
+    .mockupImg {
+        margin-top: 5%;
     }
 }
 
