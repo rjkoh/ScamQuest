@@ -42,8 +42,7 @@ html {
 
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  width: 100vw;
 }
 
 body {
@@ -51,6 +50,7 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: var(--font-family-secondary);
+  overflow-x: hidden;
 }
 
 a {
