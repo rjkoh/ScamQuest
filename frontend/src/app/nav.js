@@ -42,7 +42,9 @@ export default function Nav({ userProfile }) {
             </Link>
         </div>
         <div className={styles.navbarBottomContainer}>
-            <h3 className={styles.answerStreak}>5 🔥</h3>
+            <Link className={`${styles.restartContainer}`} href="/">
+                Restart
+            </Link>
         </div>
     </nav>  
   );

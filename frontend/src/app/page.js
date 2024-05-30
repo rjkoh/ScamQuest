@@ -36,14 +36,18 @@ export default function Home() {
     }
   }
 
+  const selectQuestion = (index) => {
+    setQuestionIndex(index);
+  }
+
   return (
     <main className={styles.container}>
       {isLoading
       && <Spinner />}
       <Question {...questions[questionIndex]} nextQuestion={nextQuestion}/>
       <div className={styles.questionIndexContainer}>
-        {questions.map((question, index) => (<div className={styles.questionIndexDot}>
-          .
+        {questions.map((question, index) => (<div className={styles.questionIndexDot} onClick={() => selectQuestion(index)}>
+          <span className={index === questionIndex ? styles.selectedQuestionIndexDot : ''}>.</span>
         </div>))}
       </div>
     </main>

@@ -14,5 +14,17 @@
 }
 
 .questionIndexDot {
-    font-size: var(--font-size-large);
+    font-family: var(--font-family-main);
+    font-size: calc(2 * var(--font-size-large));
+    padding: 0 calc(0.5rem + 0.5vw);
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.questionIndexDot:hover {
+    color: orangered;
+}
+
+.selectedQuestionIndexDot {
+    color: orange;
 }
