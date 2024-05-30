@@ -49,33 +49,12 @@
     margin-right: calc(0.6vw + 0.6rem);
 }
 
-.profileLinkContainer {
-    margin-bottom: 0;
-    height: 50px;
-}
-
-.profilePicture {
-    border-radius: 5px;
-}
-
-.profileSideContainer {
+.navbarBottomContainer {
     display: flex;
-    flex-direction: column;
-    height: 100%;
-    margin-left: calc(0.5vw + 0.5rem);
+    flex-direction: row;
+    justify-content: center;
 }
 
-.profileName {
-    font-size: var(--font-size-header);
-    margin-bottom: calc(0.2vh + 0.2rem);
-}
-
-.profileEmail {
-    font-size: var(--font-size-secondary);
-    color: var(--font-color-secondary);
-}
-
-.profileLinkContainer.active {
-    background-color: transparent;
-    color: var(--font-color-linkHighlight);
+.answerStreak {
+    font-size: var(--font-size-logo);
 }

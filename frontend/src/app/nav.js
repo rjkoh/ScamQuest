@@ -42,20 +42,7 @@ export default function Nav({ userProfile }) {
             </Link>
         </div>
         <div className={styles.navbarBottomContainer}>
-            <Link className={`${styles.navLinkContainer} ${styles.profileLinkContainer} ${pathname === '/profile' ? styles.active : styles.inactive}`} href="/profile">
-                <Image
-                    src={profilePicUrl}
-                    alt={profileAltText}
-                    width={50}
-                    height={50}
-                    layout="fixed"
-                    className={styles.profilePicture}
-                />
-                <div className={styles.profileSideContainer}>
-                    <p className={styles.profileName}>{profileName}</p>
-                    <p className={styles.profileEmail}>{profileEmail}</p>
-                </div>
-            </Link>
+            <h3 className={styles.answerStreak}>5 🔥</h3>
         </div>
     </nav>  
   );
