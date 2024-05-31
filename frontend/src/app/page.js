@@ -43,6 +43,9 @@ export default function Home() {
   }
 
   const selectQuestion = (index) => {
+    if (index < questionIndex) {
+      return;
+    }
     setQuestionIndex(index);
   }
 
@@ -61,7 +64,7 @@ export default function Home() {
         <div className={styles.questionIndexContainer}>
           <dotlottie-player src="https://lottie.host/f4f5d736-8ec0-4cb8-9671-bc389490625a/3Seb1Rqgje.json" background="transparent" speed="1" style={{position: 'absolute', top: '-40px', left: `calc(-15px + ${questionIndex} * (1.5rem + 1.5vw))`, width: '80px', height: '80px', transitionDuration: '2s'}} loop autoplay></dotlottie-player>
           {questions.map((_, index) => (<div key={index} className={styles.questionIndexDot} onClick={() => selectQuestion(index)}>
-            <span className={index === questionIndex ? styles.selectedQuestionIndexDot : ''}>.</span>
+            <span className={`${index === questionIndex ? styles.selectedQuestionIndexDot : ''} ${index < questionIndex ? styles.pastQuestionIndexDot : ''}`}>.</span>
           </div>))}
         </div></>}
         {hasEnded
