@@ -7,7 +7,7 @@ import Spinner from "@/components/Spinner";
 import Trend from "@/components/Trend";
 import Nav from "../nav";
 
-export default function Home() {
+export default function Latest() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [trends, setTrends] = useState([]);
@@ -33,7 +33,7 @@ export default function Home() {
       <Nav />
       <div className={styles.container}>
         {isLoading
-        && <Spinner />}
+        && <Spinner />}=
         <div className={styles.trendsGridContainer}>
           {trends.map(trend => (
             <Trend {...trend}/>
