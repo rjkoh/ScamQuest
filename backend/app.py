@@ -7,6 +7,7 @@ CORS(app)
 model = GenModel()
 
 # Sample data for /trends endpoint
+# Proof-of-Concept: refer to scraper.py for webscraper of trends
 trends_data = {
     "Data": [
         {
