@@ -7,7 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 
-export default function Nav({ userProfile }) {
+export default function Nav({ userProfile, score }) {
 
   const pathname = usePathname();
 
@@ -33,9 +33,9 @@ export default function Nav({ userProfile }) {
             </Link>
         </div>
         <div className={styles.navbarBottomContainer}>
-            <Link className={`${styles.restartContainer}`} href="/">
-                streak
-            </Link>
+            <h2 className={styles.streak}>
+                {score}
+            </h2>
         </div>
     </nav>  
   );
