@@ -1,24 +1,30 @@
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     row-gap: calc(2rem + 2vh);
-    height: 100%;
+    height: fit-content;
     width: 100%;
     border-radius: 20px;
     border: 2px solid orange;
-    justify-content: center;
     padding: calc(1rem + 1vw);
 }
 
 .trendHeader {
     font-size: var(--font-size-large);
     font-weight: var(--font-weight-header);
+    color: var(--icon-color-blue);
+}
+
+.trendDetailsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .trendAuthor {
     font-size: var(--font-size-medium);
     font-weight: var(--font-weight-secondary);
+    color: var(--font-color-linkHighlight);
 }
 
 .trendDate {

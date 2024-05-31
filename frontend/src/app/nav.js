@@ -34,7 +34,7 @@ export default function Nav({ userProfile }) {
         </div>
         <div className={styles.navbarBottomContainer}>
             <Link className={`${styles.restartContainer}`} href="/">
-                Restart
+                streak
             </Link>
         </div>
     </nav>  
