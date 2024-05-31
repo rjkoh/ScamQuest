@@ -161,10 +161,24 @@ export async function getTrends() {
     },
     {
       'trendId': 4,
-      'header': "AM A DUMB FUCK",
+      'header': "I LOST $6K TO A JOB SCAM",
       'author': "anonymous",
       'date': "26/5/24",
-      'body': "I kena baited to join hackathon."
+      'body': "They first contacted me through a WhatsApp group chat for TripAdvisor and Shopee, sending a job link to Telegram. They taught me to simply click likes for shops to help sellers create awareness/popularity, offering $3-30 rewards every half hour. Next, they increased the job's difficulty by asking me to cart out items with very small amounts involved, around $2-3. They reimbursed me the amount paid with much better rewards ($10-50). At certain times of the day, they introduced higher return jobs (20-40%). They sent a link to create an account to complete the work order. First, I was asked to transfer the amount I wanted to work on, and they assigned the same amount of credits into the work page. After completing the task, I informed them in the Telegram group. They then told me there was another work order from the merchant that I needed to complete to get back the money I put in for the first job. There were no refunds if I didn't follow their instructions to complete all tasks. If I did complete them, they promised extra returns. "
+    },
+    {
+      'trendId': 5,
+      'header': "ALWAYS VERIFY BEFORE TAKING ON A JOB",
+      'author': "anonymous",
+      'date': "25/5/24",
+      'body': "Got contacted by a recruiter on whats app asking if im looking for job, got referred to their recruiter claiming to be from \"moni-Media\", provided the company’s UEN details. Recruiter claimed the job task is to promote company brands on their website with a max of 30 promotes for each set. Within each set, there is a possibility that you get 2-3 “combined bonus” where your account balance will go negative and have to top up to withdraw to clear, complete and guaranteed able to withdraw. If you do not do as they say, your recruiter will call you and shout at you to say you are being irresponsible. They will also ask you to join their whatsapp chat group with other potential scammers to help your recruiter to give the false impression that it is legitimate. Beware of this job scam. When in doubt, google the actual Company and contact the management there through linkedin and verify legitimacy of the job"
+    },
+    {
+      'trendId': 6,
+      'header': "BEWARE OF JOB SCAMS",
+      'author': "anonymous",
+      'date': "23/5/24",
+      'body': "Hotel Line? Assisting booking.com, trip.com, etc. It's a scam. I didn’t lose anything, but the company is non-existent. Remember, if it's an entity, there must be a legitimate office and website that you can easily track. Their trick is the same: high base pay plus commission for processing hotel orders. What will happen is they will ask you to wire money for the process to go through."
     }
   ];
 
