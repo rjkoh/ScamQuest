@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image";
 import styles from "./page.module.css";
 import { useState, useEffect } from "react";
 import { getTrends } from "@/util";
@@ -8,7 +7,7 @@ import Spinner from "@/components/Spinner";
 import Trend from "@/components/Trend";
 import Nav from "../nav";
 
-export default function Home() {
+export default function Latest() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [trends, setTrends] = useState([]);
@@ -33,8 +32,12 @@ export default function Home() {
     <main className={styles.main}>
       <Nav />
       <div className={styles.container}>
+      <video autoPlay muted loop className={styles.videoBackground}>
+          <source src="/videos/background.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         {isLoading
-        && <Spinner />}
+        && <Spinner />}=
         <div className={styles.trendsGridContainer}>
           {trends.map(trend => (
             <Trend {...trend}/>
