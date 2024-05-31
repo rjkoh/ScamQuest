@@ -59,8 +59,9 @@ export default function Home() {
           <source src="/videos/background.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-
-        {!hasBegun
+        {isLoading
+        && <Spinner />}=
+        {!isLoading && !hasBegun
         && <Countdown setHasBegun={setHasBegun} />}
         {(!hasEnded && !isLoading && hasBegun)
         && <><Question {...questions[questionIndex]} nextQuestion={nextQuestion} setScore={setScore} score={score}/>
