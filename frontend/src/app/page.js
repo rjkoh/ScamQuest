@@ -44,13 +44,18 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <Nav />
+      <Nav score={score} />
       <div className={styles.container}>
+        <video autoPlay muted loop className={styles.videoBackground}>
+          <source src="/videos/background.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         {isLoading
         && <Spinner />}
         <Question {...questions[questionIndex]} nextQuestion={nextQuestion} setScore={setScore} score={score}/>
         <div className={styles.questionIndexContainer}>
-          {questions.map((question, index) => (<div className={styles.questionIndexDot} onClick={() => selectQuestion(index)}>
+          <dotlottie-player src="https://lottie.host/f4f5d736-8ec0-4cb8-9671-bc389490625a/3Seb1Rqgje.json" background="transparent" speed="1" style={{position: 'absolute', top: '-40px', left: `calc(-15px + ${questionIndex} * (1.5rem + 1.5vw))`, width: '80px', height: '80px', transitionDuration: '2s'}} loop autoplay></dotlottie-player>
+          {questions.map((_, index) => (<div key={index} className={styles.questionIndexDot} onClick={() => selectQuestion(index)}>
             <span className={index === questionIndex ? styles.selectedQuestionIndexDot : ''}>.</span>
           </div>))}
         </div>
