@@ -7,12 +7,14 @@ import { getQuestions } from "@/util";
 import Spinner from "@/components/Spinner";
 import Question from "@/components/Question";
 import Nav from "./nav";
+import End from "@/components/End";
 
 export default function Home() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [questions, setQuestions] = useState([]);
   const [score, setScore] = useState(0);
+  const [hasEnded, setHasEnded] = useState(false);
 
   const [questionIndex, setQuestionIndex] = useState(0);
 
@@ -35,6 +37,8 @@ export default function Home() {
   const nextQuestion = () => {
     if ((questionIndex + 1) < questions.length) {
       setQuestionIndex(questionIndex + 1);
+    } else {
+      setHasEnded(true);
     }
   }
 
@@ -52,13 +56,17 @@ export default function Home() {
         </video>
         {isLoading
         && <Spinner />}
-        <Question {...questions[questionIndex]} nextQuestion={nextQuestion} setScore={setScore} score={score}/>
+        {(!hasEnded && !isLoading)
+        && <><Question {...questions[questionIndex]} nextQuestion={nextQuestion} setScore={setScore} score={score}/>
         <div className={styles.questionIndexContainer}>
           <dotlottie-player src="https://lottie.host/f4f5d736-8ec0-4cb8-9671-bc389490625a/3Seb1Rqgje.json" background="transparent" speed="1" style={{position: 'absolute', top: '-40px', left: `calc(-15px + ${questionIndex} * (1.5rem + 1.5vw))`, width: '80px', height: '80px', transitionDuration: '2s'}} loop autoplay></dotlottie-player>
           {questions.map((_, index) => (<div key={index} className={styles.questionIndexDot} onClick={() => selectQuestion(index)}>
             <span className={index === questionIndex ? styles.selectedQuestionIndexDot : ''}>.</span>
           </div>))}
-        </div>
+        </div></>}
+        {hasEnded
+        && <End score={score} setScore={setScore} setQuestionIndex={setQuestionIndex} setHasEnded={setHasEnded}/>
+        }
       </div>
     </main>
   );
