@@ -1,10 +1,11 @@
 import styles from './Question.module.css';
 
-export default function Question({ questionId, questionType, body, question, options, answer, nextQuestion }) {
+export default function Question({ questionId, questionType, body, question, options, answer, nextQuestion, setScore, score }) {
 
   const checkQuestion = (answerIndex) => {
     if (answerIndex === answer) {
       alert("Great Job!");
+      setScore(score + 1);
       nextQuestion();
       return;
     } else {

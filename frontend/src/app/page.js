@@ -6,11 +6,13 @@ import { useState, useEffect } from "react";
 import { getQuestions } from "@/util";
 import Spinner from "@/components/Spinner";
 import Question from "@/components/Question";
+import Nav from "./nav";
 
 export default function Home() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [questions, setQuestions] = useState([]);
+  const [score, setScore] = useState(0);
 
   const [questionIndex, setQuestionIndex] = useState(0);
 
@@ -41,14 +43,17 @@ export default function Home() {
   }
 
   return (
-    <main className={styles.container}>
-      {isLoading
-      && <Spinner />}
-      <Question {...questions[questionIndex]} nextQuestion={nextQuestion}/>
-      <div className={styles.questionIndexContainer}>
-        {questions.map((question, index) => (<div className={styles.questionIndexDot} onClick={() => selectQuestion(index)}>
-          <span className={index === questionIndex ? styles.selectedQuestionIndexDot : ''}>.</span>
-        </div>))}
+    <main className={styles.main}>
+      <Nav />
+      <div className={styles.container}>
+        {isLoading
+        && <Spinner />}
+        <Question {...questions[questionIndex]} nextQuestion={nextQuestion} setScore={setScore} score={score}/>
+        <div className={styles.questionIndexContainer}>
+          {questions.map((question, index) => (<div className={styles.questionIndexDot} onClick={() => selectQuestion(index)}>
+            <span className={index === questionIndex ? styles.selectedQuestionIndexDot : ''}>.</span>
+          </div>))}
+        </div>
       </div>
     </main>
   );
