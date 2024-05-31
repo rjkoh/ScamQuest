@@ -14,18 +14,21 @@
     align-items: center;
     height: 100%;
     width: 100%;
+    padding-top: 5vh;
 }
 
 .questionIndexContainer {
+    position: relative;
     display: flex;
     flex-direction: row;
     width: auto;
 }
 
 .questionIndexDot {
+    text-align: center;
     font-family: var(--font-family-main);
     font-size: calc(2 * var(--font-size-large));
-    padding: 0 calc(0.5rem + 0.5vw);
+    width: calc(1.5rem + 1.5vw);
     cursor: pointer;
     transition-duration: 0.3s;
 }
@@ -37,3 +40,4 @@
 .selectedQuestionIndexDot {
     color: orange;
 }
+

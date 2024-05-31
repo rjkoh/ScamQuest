@@ -44,13 +44,14 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <Nav />
+      <Nav score={score} />
       <div className={styles.container}>
         {isLoading
         && <Spinner />}
         <Question {...questions[questionIndex]} nextQuestion={nextQuestion} setScore={setScore} score={score}/>
         <div className={styles.questionIndexContainer}>
-          {questions.map((question, index) => (<div className={styles.questionIndexDot} onClick={() => selectQuestion(index)}>
+          <dotlottie-player className={styles.dog} src="https://lottie.host/08449653-a4f8-43df-80c9-84c4df8cd224/OA7QudjeW1.json" background="transparent" speed="1" style={{position: 'absolute', top: '-40px', left: `calc(-15px + ${questionIndex} * (1.5rem + 1.5vw))`, width: '80px', height: '80px', transitionDuration: '2s'}} loop autoplay></dotlottie-player>
+          {questions.map((_, index) => (<div key={index} className={styles.questionIndexDot} onClick={() => selectQuestion(index)}>
             <span className={index === questionIndex ? styles.selectedQuestionIndexDot : ''}>.</span>
           </div>))}
         </div>

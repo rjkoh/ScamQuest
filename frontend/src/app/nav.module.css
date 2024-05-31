@@ -55,6 +55,6 @@
     justify-content: center;
 }
 
-.answerStreak {
+.streak {
     font-size: var(--font-size-logo);
 }

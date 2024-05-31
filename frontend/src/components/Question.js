@@ -4,14 +4,9 @@ export default function Question({ questionId, questionType, body, question, opt
 
   const checkQuestion = (answerIndex) => {
     if (answerIndex === answer) {
-      alert("Great Job!");
       setScore(score + 1);
-      nextQuestion();
-      return;
-    } else {
-      alert("Try Again Dumbass!")
-      return;
     }
+    nextQuestion();
   }
 
   return (
