@@ -4,7 +4,6 @@ import Option from './Option';
 export default function Question({ questionId, questionType, body, question, options, answer, nextQuestion, setScore, score }) {
 
   const pickOption = (answerIndex) => {
-    setTimeout(() => {}, 1200)
     if (answerIndex === answer) {
       setScore(score + 1);
     }
