@@ -1,14 +1,26 @@
 import styles from './Question.module.css';
 
-export default function Question({ questionId, questionType, body, question, options, answer, nextQuestion }) {
+export default function Question({ questionId, questionType, body, question, options, answer, nextQuestion, setScore, score }) {
+
+  const checkQuestion = (answerIndex) => {
+    if (answerIndex === answer) {
+      alert("Great Job!");
+      setScore(score + 1);
+      nextQuestion();
+      return;
+    } else {
+      alert("Try Again Dumbass!")
+      return;
+    }
+  }
 
   return (
-    <div className={styles.container} onClick={nextQuestion}>
+    <div className={styles.container}>
         {questionType == 0
         && <>
             <h2 className={styles.questionNumber}>{questionId}. {question}</h2>
             <div className={styles.options}>
-                {options.map((option, index) => (<div key={index} className={styles.option}>
+                {options.map((option, index) => (<div key={index} className={styles.option} onClick={() => checkQuestion(index)}>
                     {option}
                 </div>))}
             </div>

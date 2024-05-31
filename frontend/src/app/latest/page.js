@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { getTrends } from "@/util";
 import Spinner from "@/components/Spinner";
 import Trend from "@/components/Trend";
+import Nav from "../nav";
 
 export default function Home() {
 
@@ -28,13 +29,16 @@ export default function Home() {
   }, [])
 
   return (
-    <main className={styles.container}>
-      {isLoading
-      && <Spinner />}
-      <div className={styles.trendsGridContainer}>
-        {trends.map(trend => (
-          <Trend {...trend}/>
-        ))}
+    <main className={styles.main}>
+      <Nav />
+      <div className={styles.container}>
+        {isLoading
+        && <Spinner />}
+        <div className={styles.trendsGridContainer}>
+          {trends.map(trend => (
+            <Trend {...trend}/>
+          ))}
+        </div>
       </div>
     </main>
   );
