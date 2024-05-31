@@ -10,6 +10,12 @@
 .questionNumber {
     font-size: var(--font-size-large);
     font-weight: var(--font-weight-header);
+    width: 80%;
+    text-align: center;
+}
+
+.questionText {
+    font-size: calc(var(--font-size-large) * 1.2);
 }
 
 .options {
