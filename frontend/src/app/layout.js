@@ -2,8 +2,8 @@ import "./globals.css";
 import Nav from "./nav";
 
 export const metadata = {
-  title: "Frontend",
-  description: "This is the frontend",
+  title: "ScamQuest",
+  description: "This is the frontend for ScamQuest",
 };
 
 export default function RootLayout({ children }) {
