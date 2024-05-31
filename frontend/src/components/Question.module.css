@@ -24,5 +24,5 @@
     grid-template-rows: repeat(2, 1fr);
     gap: calc(0.5rem + 0.5vw);
     width: 80%;
-    height: 70%; 
+    height: 60%; 
 }
