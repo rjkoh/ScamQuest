@@ -8,6 +8,7 @@
     border-radius: 20px;
     border: 2px solid orange;
     padding: calc(1rem + 1vw);
+    background-color: rgba(255,255,255,0.7);
 }
 
 .trendHeader {
@@ -44,4 +45,5 @@
     width: fit-content;
     border-radius: 20px;
     border-color: var(--icon-color-blue);
+    font-size: var(--font-size-header);
 }

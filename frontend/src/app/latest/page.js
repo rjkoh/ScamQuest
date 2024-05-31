@@ -32,6 +32,10 @@ export default function Latest() {
     <main className={styles.main}>
       <Nav />
       <div className={styles.container}>
+      <video autoPlay muted loop className={styles.videoBackground}>
+          <source src="/videos/background.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         {isLoading
         && <Spinner />}=
         <div className={styles.trendsGridContainer}>
