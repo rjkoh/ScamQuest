@@ -8,9 +8,11 @@ import Spinner from "@/components/Spinner";
 import Question from "@/components/Question";
 import Nav from "./nav";
 import End from "@/components/End";
+import Countdown from "@/components/Counter";
 
 export default function Home() {
 
+  const [hasBegun, setHasBegun] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [questions, setQuestions] = useState([]);
   const [score, setScore] = useState(0);
@@ -57,9 +59,10 @@ export default function Home() {
           <source src="/videos/background.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        {isLoading
-        && <Spinner />}
-        {(!hasEnded && !isLoading)
+
+        {!hasBegun
+        && <Countdown setHasBegun={setHasBegun} />}
+        {(!hasEnded && !isLoading && hasBegun)
         && <><Question {...questions[questionIndex]} nextQuestion={nextQuestion} setScore={setScore} score={score}/>
         <div className={styles.questionIndexContainer}>
           <dotlottie-player src="https://lottie.host/f4f5d736-8ec0-4cb8-9671-bc389490625a/3Seb1Rqgje.json" background="transparent" speed="1" style={{position: 'absolute', top: '-40px', left: `calc(-15px + ${questionIndex} * (1.5rem + 1.5vw))`, width: '80px', height: '80px', transitionDuration: '2s'}} loop autoplay></dotlottie-player>
