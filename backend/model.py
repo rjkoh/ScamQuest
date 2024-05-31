@@ -60,8 +60,9 @@ class GenModel:
         return create_retrieval_chain(retriever, question_answer_chain)
 
     def generate_msg_question_bank(self) -> str:
-        questions = []
-        msg_query = "Give me 10 examples of messages that scammers use in Singapore."
+        msg_query = """Give me 10 examples of messages that scammers use in Singapore. \
+        Format each example without any numbering, quotation marks or additional styling, on a single line each. \
+        """
         
         msg_response = self.rag_chain.invoke({"input": msg_query})
         
@@ -69,7 +70,9 @@ class GenModel:
     
     def generate_mcq_question_bank(self) -> str:
         mcq_query = """Give me 10 multiple choice questions about scam prevention in Singapore. \
-            Format each question such that it starts with Question: and the correct answer
+            Format each question without any question number or option number. For each question, the first line is the question, the second line is the first option, \
+            the third line is the second option, the fourth line is the third option, the fifth line is the fourth option, \
+            and the sixth line is index of the correct answer only.
             """
         mcq_response = self.rag_chain.invoke({"input": mcq_query})
 
@@ -81,25 +84,32 @@ class GenModel:
             if len(self.msg_questions) == 0:
                 raw = self.generate_msg_question_bank()
                 self.msg_questions = raw.split("\n")
-            unprocessed_qn = self.msg_questions.pop()
-            qn = unprocessed_qn.split(". ", 1)[1]
+            qn = self.msg_questions.pop()
+            if qn == "":
+                return self.generate_question()
+            # qn = unprocessed_qn.split(". ", 1)[1]
+            # print(qn)
             return [qn_type, [qn]]
         else:
             if len(self.mcq_questions) == 0:
                 raw = self.generate_mcq_question_bank()
-                self.mcq_questions = raw.split("Question:")
+                self.mcq_questions = raw.split("\n\n")
             unprocessed_qn = self.mcq_questions.pop()
             print(unprocessed_qn)
             if unprocessed_qn == "":
                 return self.generate_question()
             splits = unprocessed_qn.split("\n")
             qn = splits[0].strip()
-            a = splits[1].split(") ")[1]
-            b = splits[2].split(") ")[1]
-            c = splits[3].split(") ")[1]
-            d = splits[4].split(") ")[1]
-            ans = unprocessed_qn.split("Correct answer: ")[1]
-            return [qn_type, [qn, [a, b, c, d], ans]]
+            a = splits[1]
+            b = splits[2]
+            c = splits[3]
+            d = splits[4]
+            ans = splits[5].strip()
+            if len(ans) > 1:
+                ans_int = 0
+            else:
+                ans_int = int(ans) - 0
+            return [qn_type, [qn, [a, b, c, d], ans_int]]
 
         
         

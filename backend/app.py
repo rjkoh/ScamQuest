@@ -51,7 +51,7 @@ def get_questions():
             "questionType": "msg",
             "question": lst[0],
             "options": ["Yes", "No"],
-            "answer": "Yes",
+            "answer": 0,
         }
     return jsonify(data)
 
