@@ -1,5 +1,7 @@
 # ScamQuest
 
+Forked to test SonarQube
+
 ### Quickstart guide
 1. Setup the virtual environment and download the relevant dependencies
 2. Add your own .env in the root directory, with `OPENAI_API_KEY = {YOUR_OWN_KEY}`
